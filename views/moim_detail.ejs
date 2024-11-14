@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+      ></script>
+      <script src="/static/moim_list.js"></script>
+      <script src="/static/moim_detail.js"></script>
+      <script src="/static/moimdetail.js"></script>
+      <link rel="stylesheet" href="/static/style.css" type="text/css" />
+      <link rel="stylesheet" href="/static/moim_detail.css" type="text/css" />
+      <title>상세페이지</title>
+      <style>
+        /* body {    
+          overflow-x : auto;
+        } */
+      </style>
+  </head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- 로고 -->
+      <a href="/home">MOiM</a>
+    </div>
+    <div class="setting">
+        <div>
+            <span onclick="location.href='/moim/moims';">←</span>
+        </div>
+    </div>
+  </header>
+  <section>
+    <% const img = "/" + moim[0].represent_img; %> 
+    <div class="moim">
+      <img src= <%=img %> alt="sdad"><br>
+      <div>
+      <h3><%= moim[0].title %></h3>
+      <button class="dibsMoim" onclick="DibsMoim()">
+          ♡
+          <!-- <% if(isDibs) { %>
+            ♥
+          <% } else { %>
+            ♡
+          <% } %>  -->
+        </button>
+        </div>
+      </div>
+        <table>
+          <tbody>
+            <% if (!moim[0].on_line) { %>
+              <tr>
+                <td id="col1">장소</td>
+                <td id="col2"><%= moim[0].location %></td>
+              </tr>
+            <% } %>
+            <tr>
+              <td id="col1">카테고리</td>
+              <td id="col2"><%= moim[0].category %></td>
+          </tr>
+            <tr>
+                <td id="col1">일시</td>
+                <td id="col2"><%= moim[0].even_date %></td>
+            </tr>
+            <tr>
+                <td id="col1">모집 기간</td>
+                <td id="col2"><%= moim[0].expiration_date %></td>
+            </tr>
+            <tr>
+                <td id="col1">모집 인원</td>
+                <% if (Number(moim[0].max_people) != 0 ) { %>
+                  <td id="col2"><span><%= detail[0].min_people %> ~ <%= moim[0].max_people %></span><button type="button" onclick="showPPL('<%=moim[0].moim_id%>')">👥 <%= moimcount[0].moim_count %> </button></td>
+                <% } else { %>
+                  <td id="col2"><span><%= detail[0].min_people %> ~ 무제한</span><button type="button" onclick="showPPL('<%=moim[0].moim_id%>')">👥 <%= moimcount[0].moim_count %> </button></td>
+                <% } %>
+                
+            </tr>
+            <!-- 참여하는 경우 detail 정보 추가 -->
+        <% if (accession == true) { %>
+            <tr>
+              <td id="col1">내용</td>
+              <td id="col2"><%= detail[0].content %></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- <div class="apply"> -->
+          <% if (moim[0].nickname == user.nickname ) 
+          { %>
+            <button class="apply1" onclick="moim_distory('<%= moim[0].moim_id %>')">모임 삭제</button>
+            <button class="apply2" onclick="moim_correction('<%= moim[0].moim_id %>')">모임 수정</button>
+       <% } else { %>
+            <button class="apply" onclick="moimset_dis('<%= moim[0].moim_id %>')">모임 탈퇴</button>
+        <% } %> 
+      <% } else { %>
+
+             <% if (moimcount[0].moim_count < moim[0].max_people) { %>
+              <button class="apply" onclick="moimset('<%= moim[0].moim_id %>')">참여하기</button>
+             <% } else { %>
+              <button class="apply3" onclick="alert('아쉽게도, 정원이 초과되었습니다.')">정원 초과</button>
+              <!-- 대기기능 추가할 수 있으면 하기로 함 -->
+            <% } %>
+      <% } %>
+        <!-- </div> -->
+    </div>
+  </section>
+</body>
+<script>
+  const isDibs = "<%= isDibs %>";
+  console.log(isDibs);
+    
+</script>
+</html>

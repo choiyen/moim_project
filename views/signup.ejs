@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css" />
+    <link rel="stylesheet" href="/static/login.css" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <!-- 로고 -->
+        <a href="/">MOiM</a>
+      </div>
+      <div class="setting">
+        <div>
+          <span onclick="location.href='/'">←</span>
+        </div>
+      </div>
+    </header>
+    <div></div>
+    <div>
+      <h2>회원가입</h2>
+      <form name="signup-form">
+        <input
+          type="text"
+          name="username"
+          placeholder="닉네임(1~10자)"
+          maxlength="10"
+          title="닉네임은 10글자 이하여야 합니다."
+          required
+        /><br />
+        <input
+          type="text"
+          id="id"
+          placeholder="아이디를 입력하세요."
+          pattern="^[0-9a-zA-Z]+$"
+          maxlength="20"
+          title="아이디는 영문 소문자/대문자/숫자로만 이루어져야 합니다."
+          required
+        /><br />
+        <input
+          type="password"
+          id="pw"
+          placeholder="비밀번호를 입력하세요.(8~20자)"
+          pattern="^[0-9a-zA-Z]+$"
+          minlength="8"
+          maxlength="20"
+          title="비밀번호는 영문 소문자/대문자/숫자로만 이루어져야 합니다."
+          required
+        /><br />
+        <input
+          type="password"
+          id="confirmPw"
+          placeholder="비밀번호를 다시 입력하세요."
+          maxlength="20"
+          required
+        /><br />
+        <button type="button" onclick="signup()">회원가입하기</button>
+      </form>
+    </div>
+    <p><a href="/">로그인 </a></p>
+
+    <script>
+      async function signup() {
+        const form = document.forms["signup-form"];
+        if (!form.checkValidity()) {
+          form.reportValidity(); // 브라우저가 기본 유효성 검사 메시지를 표시
+          return;
+        }
+
+        if (form.pw.value !== form.confirmPw.value) {
+          alert("비밀번호가 일치하지 않습니다.");
+          return;
+        }
+        await axios({
+          method: "post",
+          url: "/user/register",
+          data: {
+            nickname: form.username.value,
+            userid: form.id.value,
+            pw: form.pw.value,
+          },
+        }).then((res) => {
+          console.log("res", res);
+          if (res.data.result) {
+            alert("회원가입이 완료되었습니다. 로그인해주세요.");
+            document.location.href = "/";
+          } else {
+            alert("회원가입에 실패했습니다. 다시 시도해주세요.");
+            form.reset();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
