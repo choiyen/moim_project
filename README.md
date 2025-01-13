@@ -98,7 +98,8 @@
 ```
 
 ## 5. 개발 기간 및 작업 관리
-![image](https://github.com/user-attachments/assets/d8b4f7d5-bb8c-46be-93fb-2ba3894e3b33)
+<img src="[https://user-images.githubusercontent.com/51365114/119627750-716f3100-be47-11eb-8e83-686b23c2c161.png](https://github.com/user-attachments/assets/d8b4f7d5-bb8c-46be-93fb-2ba3894e3b33)  width="200" height="400"/>
+
 
 ## 6. 페이지별 기능
 
