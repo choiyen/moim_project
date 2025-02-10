@@ -1,4 +1,4 @@
-![모임-수정](https://github.com/user-attachments/assets/2b4df7b3-3118-45ca-bc10-4b0e73973995)#  🧑 MOIM
+#  🧑 MOIM
 ![image](https://github.com/user-attachments/assets/0fe19b25-6e6b-4316-9e3c-a16acad1b34d)
 
 ## 1. 주제 선정 이유
