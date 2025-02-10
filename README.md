@@ -115,7 +115,9 @@
 ## 6. 페이지별 기능
 1. 로그인 화면
 
-https://github.com/user-attachments/assets/01ae16a9-92ae-419b-a6af-79fe2ed35ecc
+![moim-로그인](https://github.com/user-attachments/assets/37a2e301-86b3-4af3-a89c-66fa0fff71de)
+
+
 
 
 
