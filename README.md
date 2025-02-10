@@ -123,15 +123,16 @@
 
 
 2. 회원가입 기능
+   
    ![moim-회원가입](https://github.com/user-attachments/assets/720bcede-6823-4c7b-a22b-90c3619bcf99)
 
 ````
 비밀번호 설정 시 영대소문자가 맞지 않으면 경고 메세지를 출력하도록 제작함
-
 ````
 
 
 3. 모임- 등록/수정
+   
    ![모임-등록](https://github.com/user-attachments/assets/73fc3020-a4c2-4610-8c7f-e2143d2bbc48)
 
 ```
@@ -140,7 +141,9 @@
 ```
 
 4. 모임 수정
+   
 ![모임-수정](https://github.com/user-attachments/assets/1ad8f9f8-e244-4634-aaea-617bfc94bf57)
+
 ```
 모임 수정 시 모임 생성 날짜, 설명, 제목, 이미지만 수정 가능하도록 제한함.
 ```
