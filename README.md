@@ -1,4 +1,4 @@
-#  🧑 MOIM
+![모임-수정](https://github.com/user-attachments/assets/2b4df7b3-3118-45ca-bc10-4b0e73973995)#  🧑 MOIM
 ![image](https://github.com/user-attachments/assets/0fe19b25-6e6b-4316-9e3c-a16acad1b34d)
 
 ## 1. 주제 선정 이유
@@ -117,8 +117,14 @@
 
 ![moim-로그인](https://github.com/user-attachments/assets/37a2e301-86b3-4af3-a89c-66fa0fff71de)
 
+2. 회원가입 기능
+   ![moim-회원가입](https://github.com/user-attachments/assets/720bcede-6823-4c7b-a22b-90c3619bcf99)
 
+3. 모임- 등록/수정
+   ![모임-등록](https://github.com/user-attachments/assets/73fc3020-a4c2-4610-8c7f-e2143d2bbc48)
 
+4. 모임 수정
+![모임-수정](https://github.com/user-attachments/assets/1ad8f9f8-e244-4634-aaea-617bfc94bf57)
 
 
 
