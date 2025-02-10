@@ -117,15 +117,33 @@
 
 ![moim-로그인](https://github.com/user-attachments/assets/37a2e301-86b3-4af3-a89c-66fa0fff71de)
 
+```
+세션이 생성되면 로그인한 회원의 닉네임을 팝업창에 띄우고 메인 화면으로 돌아가도록 제작함
+```
+
+
 2. 회원가입 기능
    ![moim-회원가입](https://github.com/user-attachments/assets/720bcede-6823-4c7b-a22b-90c3619bcf99)
+
+````
+비밀번호 설정 시 영대소문자가 맞지 않으면 경고 메세지를 출력하도록 제작함
+
+````
+
 
 3. 모임- 등록/수정
    ![모임-등록](https://github.com/user-attachments/assets/73fc3020-a4c2-4610-8c7f-e2143d2bbc48)
 
+```
+1. 모임 등록 시 모임 시작 날짜가 모임이 끝나는 날짜보다 클 경우, 팝업을 발생시킴
+2. 어떤 이미지가 삽입 되었는지, 업로드 시 미리 보기를 제공함.
+```
+
 4. 모임 수정
 ![모임-수정](https://github.com/user-attachments/assets/1ad8f9f8-e244-4634-aaea-617bfc94bf57)
-
+```
+모임 수정 시 모임 생성 날짜, 설명, 제목, 이미지만 수정 가능하도록 제한함.
+```
 
 
 ## 7. 트러블 슈팅 및 어려웠던 점
